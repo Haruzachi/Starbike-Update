@@ -1,0 +1,365 @@
+/* Custom CSS for topbar and layout */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.menu-dropdown {
+  display: flex;
+  gap: 3.0rem;
+  justify-content: right;
+  margin-right: 125px;
+  align-items: right;
+  flex-wrap: wrap;
+}
+
+.menu-dropdown {
+  flex: 1;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.logo-img {
+  width: 110px;
+  margin-left: 470px;
+  height: auto;
+  align-items: left;
+}
+
+.dropdown {
+  position: relative;
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+.dropdown-btn {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn i {
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-btn i {
+  transform: rotate(180deg); /* optional flip effect */
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  min-width: 240px;       /* make it wider */
+  font-size: 1.2rem;      /* make the text larger */
+  padding: 0.75rem 0;     /* more vertical spacing */
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* deeper shadow for better contrast */
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  padding: 1rem 1.5rem;   /* more padding per item */
+  font-size: 1.15rem;     /* larger clickable text */
+}
+
+.dropdown-content a:hover {
+  background-color: #f3f4f6;
+}
+
+.auth-btn {
+  padding: 0.5rem 1rem;
+  background: rgb(219, 30, 30);
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.auth-btn:hover {
+  border: 1px solid black;
+}
+
+.card {
+  position: relative;
+  height: 13rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.cardground {
+background-color: #81818109;
+height: 255px;
+padding: 20px;
+font-size: 26px;
+display: flex;
+justify-content: center;
+margin-left: 50px;
+margin-right: 50px;
+}
+
+.cardground2 {
+background: linear-gradient(90deg,rgba(255, 0, 0, 0.438) 0%, rgba(26, 114, 247, 0.144) 50%, rgb(255, 255, 255) 100%);
+padding: 20px;
+font-size: 26px;
+display: flex;
+justify-content: center;
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-img2 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to contain */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.card-overlay2 {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+.search-input {
+  background-color: whitesmoke;
+  width: 350px;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  padding-top: 20px;
+  margin-right: 20px;
+  
+}
+
+.content {
+  margin-top: 5px;
+
+}
+
+  .image-main {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .image-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-text {
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .section2 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      background-color: #ffffff00;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .section-image2 {
+      flex: 1 1 50%;
+      min-width: 300px;
+    }
+
+    .section-image2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section-content2 {
+      flex: 1 1 50%;
+      padding: 60px 40px;
+      box-sizing: border-box;
+    }
+
+    .section-content2 h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-content2 p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn span {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+
+    .inquiry-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 50px;
+  margin-left: 100px;
+margin-right: 100px;
+}
+
+.inquiry-left,
+.inquiry-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.inquiry-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0a1d4e;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.inquiry-form textarea {
+  height: 150px;
+}
+
+.submit-btn {
+  background: black;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0a1d4e;
+}
+
+.leaflet-map {
+  height: 250px;
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+    @media (max-width: 768px) {
+      .section2 {
+        flex-direction: column;
+      }
+
+      .section-content2 {
+        padding: 30px 20px;
+        text-align: center;
+      }
+    }
